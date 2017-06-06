@@ -99,26 +99,27 @@
 				</div>
 
 				<div class="panel-body">
-					<?php echo $startDay .'-'.$lastDay; ?>
 					<table width="100%" border="1" >
 						<caption>
 						<i class="fa fa-square-o" aria-hidden="true" ></i> = ว่าง,
 						<i class="fa fa-square-o" aria-hidden="true" style="background-color:red;color:red;"></i> = อยู่,
 						<i class="fa fa-square-o" aria-hidden="true" style="background-color:green;color:green;"></i> = ทำความสะอาด
 						</caption>
-						<thead>
-							<tr >
-								<th style="text-align: center;">Room</th>
+						<thead >
+							<tr  >
+								<th style="text-align: center;"> Room</th>
+								<th style="text-align: center;"> Price/Bath</th>
 								<?php for ($i=$startDay; $i <= $lastDay; $i++) :?>
-									<th style="text-align: center;"><?php echo $i; ?></th>
+									<th style="text-align: center;"> <?php echo $i; ?></th>
 								<?php endfor ?>
 							</tr>
 						</thead>
-						<tbody>
+						<tbody >
 							<tr>
-								<td>101</td>
+								<td style="text-align: center;">101</td>
+								<td style="text-align: center;">550</td>
 								<?php for ($i=$startDay; $i <= $lastDay; $i++) :?>
-									<td style="text-align: center;"><i class="fa fa-bed" aria-hidden="true"></i>	</td>
+									<td style="text-align: center;" ><i class="fa fa-bed" aria-hidden="true"></i>	</td>
 								<?php endfor ?>
 							</tr>
 						</tbody>

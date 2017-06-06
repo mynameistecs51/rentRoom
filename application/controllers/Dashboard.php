@@ -13,12 +13,7 @@ class Dashboard extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('index');
-	}
-
-	public function calendar()
-	{
-		$data['startDay'] = date('01',strtotime(date('y-m-d')));
+		$data['startDay'] = date('1',strtotime(date('y-m-d')));
 		$data['lastDay'] = date('t',strtotime(date('y-m-d')));
 		$this->load->view('index',$data);
 	}
