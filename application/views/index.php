@@ -56,7 +56,7 @@
 			<div class="panel panel-primary">
 				<div class="panel-heading"><i class="glyphicon glyphicon-home" aria-hidden="true"></i> บันทึกประจำวัน</div>
 				<div class="panel-body ">
-					<i class="glyphicon glyphicon-hand-right"></i> <a href="www.google.com" target="_blank" >google.com</a>
+					<i class="glyphicon glyphicon-hand-right"></i> <a href="www.google.com" target="_blank" >Check In/Out</a>
 				</div>
 			</div>
 
@@ -99,84 +99,32 @@
 				</div>
 
 				<div class="panel-body">
-					<?php
-					header('Content-Type: text/html; charset=utf-8');
-					$weekDay = array( 'อาทิตย์', 'จันทร์', 'อังคาร', 'พุธ', 'พฤหัสฯ', 'ศุกร์', 'เสาร์');
-					$thaiMon = array( "01" => "มกราคม", "02" => "กุมภาพันธ์", "03" => "มีนาคม", "04" => "เมษายน",
-						"05" => "พฤษภาคม","06" => "มิถุนายน", "07" => "กรกฎาคม", "08" => "สิงหาคม",
-						"09" => "กันยายน", "10" => "ตุลาคม", "11" => "พฤศจิกายน", "12" => "ธันวาคม");
+					<?php echo $startDay .'-'.$lastDay; ?>
+					<table width="100%" border="1" >
+						<caption>
+						<i class="fa fa-square-o" aria-hidden="true" ></i> = ว่าง,
+						<i class="fa fa-square-o" aria-hidden="true" style="background-color:red;color:red;"></i> = อยู่,
+						<i class="fa fa-square-o" aria-hidden="true" style="background-color:green;color:green;"></i> = ทำความสะอาด
+						</caption>
+						<thead>
+							<tr >
+								<th style="text-align: center;">Room</th>
+								<?php for ($i=$startDay; $i <= $lastDay; $i++) :?>
+									<th style="text-align: center;"><?php echo $i; ?></th>
+								<?php endfor ?>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>101</td>
+								<?php for ($i=$startDay; $i <= $lastDay; $i++) :?>
+									<td style="text-align: center;"><i class="fa fa-bed" aria-hidden="true"></i>	</td>
+								<?php endfor ?>
+							</tr>
+						</tbody>
+					</table>
 
-//Sun - Sat
-$month = isset($_GET['month']) ? $_GET['month'] : date('m'); //ถ้าส่งค่าเดือนมาใช้ค่าที่ส่งมา ถ้าไม่ส่งมาด้วย ใช้เดือนปัจจุบัน
-$year = isset($_GET['year']) ? $_GET['year'] : date('Y'); //ถ้าส่งค่าปีมาใช้ค่าที่ส่งมา ถ้าไม่ส่งมาด้วย ใช้ปีปัจจุบัน
 
-//วันที่
-$startDay = $year.'-'.$month."-01";   //วันที่เริ่มต้นของเดือน
-
-$timeDate = strtotime($startDay);   //เปลี่ยนวันที่เป็น timestamp
-$lastDay = date("t", $timeDate);   //จำนวนวันของเดือน
-
-$endDay = $year.'-'.$month."-". $lastDay;  //วันที่สุดท้ายของเดือน
-
-$startPoint = date('w', $timeDate);   //จุดเริ่มต้น วันในสัปดาห์
-
-//echo "<br>\$data ";
-//print_r($data);
-//echo "<hr>";
-?>
-<?php
-echo "<br/>ตำแหน่งของวันที่ startDay คือ <strong>", $startPoint , " (ตรงกับ วัน" , $weekDay[$startPoint].")</strong>";
-
-$title = "เดือน $thaiMon[$month] <strong>". $startDay. " : ". $endDay."</strong>";
-
-//ลดเวลาลง 1 เดือน
-$prevMonTime = strtotime ( '-1 month' , $timeDate  );
-$prevMon = date('m', $prevMonTime);
-$prevYear = date('Y', $prevMonTime);
-//เพิ่มเวลาขึ้น 1 เดือน
-$nextMonTime = strtotime ( '+1 month' , $timeDate  );
-$nextMon = date('m', $nextMonTime);
-$nextYear = date('Y', $nextMonTime);
-
-echo '<div id="main">';
-echo '<div id="nav">
-<button class="navLeft" onclick="goTo(\''.$prevMon.'\', \''.$prevYear.'\');"><< เดือนที่แล้ว</button>
-<div class="title">'.$title.'</div>
-<button class="navRight" onclick="goTo(\''.$nextMon.'\', \''.$nextYear.'\');">เดือนต่อไป >></button>
-</div>
-<div style="clear:both"></div>';
-echo "<table id='tb_calendar' border='1' width='100%'>"; //เปิดตาราง
-// echo "<tr>
-// <th>อาทิตย์</th><th>จันทร์</th><th>อังคาร</th><th>พุธ</th><th>พฤหัสฯ</th><th>ศุกร์</th><th>เสาร์</th>
-// </tr>";
-echo "<thead>";
-echo "<th>";    //เปิดแถวใหม่
-$col = $startPoint;          //ให้นับลำดับคอลัมน์จาก ตำแหน่งของ วันในสับดาห์
-//i//f($startPoint < 7){         //ถ้าวันอาทิตย์จะเป็น 7
-// echo str_repeat("<td> </td>", $startPoint); //สร้างคอลัมน์เปล่า กรณี วันแรกของเดือนไม่ใช่วันอาทิตย์
-//}
-for($i=1; $i <= $lastDay; $i++){ //วนลูป ตั้งแต่วันที่ 1 ถึงวันสุดท้ายของเดือน
- $col++;       //นับจำนวนคอลัมน์ เพื่อนำไปเช็กว่าครบ 7 คอลัมน์รึยัง
-
- echo "<td style='text-align:center;'>", $i , "</td>";  //สร้างคอลัมน์ แสดงวันที่
- //i//f($col % 7 == false){   //ถ้าครบ 7 คอลัมน์ให้ขึ้นบรรทัดใหม่
-  //echo "</tr><tr>";   //ปิดแถวเดิม และขึ้นแถวใหม่
-  //$col = 0;     //เริ่มตัวนับคอลัมน์ใหม่
-//}
-
-echo '</th>';  //ปิดแถวสุดท้าย
-echo "</thead>";
-// echo "<tr><td style='text-align:center;'>", $i , "</td></tr>";
-// echo "<tr><td> <i class='glyphicon glyphicon-user'></i></td></tr>";
-
-}
-//i//f($col < 7){         // ถ้ายังไม่ครบ7 วัน
- //echo str_repeat("<td> </td>", 7-$col); //สร้างคอลัมน์ให้ครบตามจำนวนที่ขาด
-//}
-
-echo '</table>'; //ปิดตาราง
-echo '</main>';
-?>
 					<!-- <div class="row form_input" style="text-align:left; margin-bottom:20px">
 						<div class="form-group ">
 							<div class="col-sm-2" >
