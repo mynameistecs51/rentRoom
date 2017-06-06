@@ -85,7 +85,7 @@
 			<div class="panel panel-primary">
 				<div class="panel-heading"><i class="glyphicon glyphicon-list"></i> บันทึกการเข้าพัก</div>
 
-				<div class="navbar navbar-default" style="padding-top:5px;">
+				<div class="navbar navbar-default" style="padding-top:5px;margin-bottom: 0px;">
 					<div class="form-inline">
 						<div class="form-group pull-right">
 							<?php echo base_url(); ?>
@@ -101,25 +101,27 @@
 				<div class="panel-body">
 					<table width="100%" border="1" >
 						<caption>
-						<i class="fa fa-square-o" aria-hidden="true" ></i> = ว่าง,
-						<i class="fa fa-square-o" aria-hidden="true" style="background-color:red;color:red;"></i> = อยู่,
-						<i class="fa fa-square-o" aria-hidden="true" style="background-color:green;color:green;"></i> = ทำความสะอาด
+							<i class="fa fa-square-o" aria-hidden="true" ></i> = ว่าง,
+							<i class="fa fa-square-o" aria-hidden="true" style="background-color:red;color:red;"></i> = อยู่,
+							<i class="fa fa-square-o" aria-hidden="true" style="background-color:green;color:green;"></i> = ทำความสะอาด
 						</caption>
 						<thead >
-							<tr  >
+							<tr class="alert-info" >
 								<th style="text-align: center;"> Room</th>
-								<th style="text-align: center;"> Price/Bath</th>
+								<th style="text-align: center;"> Price</th>
 								<?php for ($i=$startDay; $i <= $lastDay; $i++) :?>
 									<th style="text-align: center;"> <?php echo $i; ?></th>
 								<?php endfor ?>
 							</tr>
 						</thead>
 						<tbody >
-							<tr>
-								<td style="text-align: center;">101</td>
+							<tr >
+								<td style="text-align: center;" class="alert-default">101</td>
 								<td style="text-align: center;">550</td>
 								<?php for ($i=$startDay; $i <= $lastDay; $i++) :?>
-									<td style="text-align: center;" ><i class="fa fa-bed" aria-hidden="true"></i>	</td>
+									<td style="text-align: center;padding: 3px;" >
+									<button class="btn btn-default btn-xs btn_dateRoom" data-numRoom='101#<?php echo $i; ?>'><i class="fa fa-bed" aria-hidden="true"></i></button>
+									</td>
 								<?php endfor ?>
 							</tr>
 						</tbody>
