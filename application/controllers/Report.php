@@ -1,16 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-/*
-* Load First
- */
 
-class Dashboard extends CI_Controller {
+class Report extends CI_Controller {
+
 	public function __construct()
 	{
 		parent::__construct();
-		redirect('checkInOut','refresh');
-	}
 
+	}
 	public function index()
 	{
 
@@ -21,8 +18,7 @@ class Dashboard extends CI_Controller {
 		$this->data['header'] = $this->template->getHeader(base_url());
 		$this->data['footer'] = $this->template->getFooter(base_url());
 	}
-
 }
 
-/* End of file dashboard.php */
-/* Location: ./application/controllers/dashboard.php */
+/* End of file Report.php */
+/* Location: ./application/controllers/Report.php */

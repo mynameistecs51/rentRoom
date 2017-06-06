@@ -1,19 +1,20 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-/*
-* Load First
- */
 
-class Dashboard extends CI_Controller {
+class CheckInout extends CI_Controller {
+
 	public function __construct()
 	{
 		parent::__construct();
-		redirect('checkInOut','refresh');
+
 	}
 
 	public function index()
 	{
-
+		$this->data['startDay'] = date('1',strtotime(date('y-m-d')));
+		$this->data['lastDay'] = date('t',strtotime(date('y-m-d')));
+		$this->Main();
+		$this->load->view('checkInOut/index',$this->data);
 	}
 
 	public function Main()
@@ -24,5 +25,5 @@ class Dashboard extends CI_Controller {
 
 }
 
-/* End of file dashboard.php */
-/* Location: ./application/controllers/dashboard.php */
+/* End of file CheckInout.php */
+/* Location: ./application/controllers/CheckInout.php */

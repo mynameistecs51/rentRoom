@@ -1,16 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-/*
-* Load First
- */
 
-class Dashboard extends CI_Controller {
+class Management extends CI_Controller {
+
 	public function __construct()
 	{
 		parent::__construct();
-		redirect('checkInOut','refresh');
-	}
 
+	}
 	public function index()
 	{
 
@@ -22,7 +19,13 @@ class Dashboard extends CI_Controller {
 		$this->data['footer'] = $this->template->getFooter(base_url());
 	}
 
+	public function CreateTypeRoom()
+	{
+		$this->Main();
+		$this->load->view('management/CreateTyperoom',$this->data);
+	}
+
 }
 
-/* End of file dashboard.php */
-/* Location: ./application/controllers/dashboard.php */
+/* End of file Management.php */
+/* Location: ./application/controllers/Management.php */
