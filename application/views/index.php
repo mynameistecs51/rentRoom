@@ -120,7 +120,7 @@
 								<td style="text-align: center;">550</td>
 								<?php for ($i=$startDay; $i <= $lastDay; $i++) :?>
 									<td style="text-align: center;padding: 3px;" >
-									<button class="btn btn-default btn-xs btn_dateRoom" data-numRoom='101#<?php echo $i; ?>'><i class="fa fa-bed" aria-hidden="true"></i></button>
+										<button class="btn btn-default btn-xs btn_dateRoom" data-numRoom='<?php echo $i ?>'><i class="fa fa-bed" aria-hidden="true"></i></button>
 									</td>
 								<?php endfor ?>
 							</tr>
@@ -156,5 +156,13 @@
 	<script src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
 	<script src="<?php echo base_url(); ?>assets/js/jquery.js"></script>
 	<script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+		$(function(){
+			$('.btn_dateRoom').click(function(){
+				console.log($(this).data('numroom'));
+			});
+		});
+	</script>
 </body>
 </html>
