@@ -4,11 +4,11 @@
 	<div class="panel-body ">
 		<div class="row">
 			<div class="col-sm-3"></div>
-			<div class="col-sm-6  alert-info" style="padding:20px;padding-left: 150px;"  >
+			<div class="col-sm-6  alert-info" style="padding:20px;padding-left: 120px;"  >
 
 				<div class="form-group row"  >
-					<div class="col-sm-6">
-						<input type="text" class="form-control form-control-lg" name="InroomType" id="InroomType" placeholder="ประเภทห้องพัก ธรรมดา,VIP" >
+					<div class="col-sm-7">
+						<input type="text" class="form-control " name="InroomType" id="InroomType" placeholder="ประเภทห้องพัก ธรรมดา,VIP" >
 					</div>
 					<button class="btn btn-primary btn_addTyperoom">
 						<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
@@ -35,26 +35,37 @@
 
 	function addTyperoom() {
 		$('.btn_addTyperoom').click(function(){
-			var  row=$(this).length+1;
-			var  html  = '<div class="typeRoom col-sm-4" ID="typeRoom'+row+'">';
-			html += '<div class="col-sm-10 alert-info" >';
-			html += $('#InroomType').val();
-			html += '<button class="btn btn-danger pull-right btn_delTyperoom"><span class="glyphicon glyphicon-minus"></span></botton>';
-			html += '</div>';
-			$('.showAdd').append(html);
-			$('#InroomType').val('');
-			delTyperoom(row);
+			if($('#InroomType').val() != ""){
+				var  row=$('.btn_delTyperoom').length+1;
+				var  html  = '<div class="typeRoom col-sm-4" ID="typeRoom'+row+'" style="margin-top:10px;font-size:25px;">';
+				html += '<div class="col-sm-10 alert-info" >';
+				html += '<div>'+$('#InroomType').val() ;
+				html += '<button class="btn btn-danger pull-right btn_delTyperoom" id="btn_deltyperoom'+row+'" style="right:0px;"><span class="glyphicon glyphicon-minus"></span></botton>';
+				html += '</div>';
+				html += '</div>';
+				$('.showAdd').append(html);
+				$('#InroomType').val('');
+				delTyperoom(row);
+			}else{
+				$("<div title='แจ้งเตือน !'> กรุณากรอกข้อมูลประเภทห้องพัก </div>").dialog({
+					modal: true,
+					buttons: {
+						'OK': {
+							text: "OK",
+							icons: {primary: "ui-icon-check"	},
+							'click':function() {
+								$(this).dialog( "close" );
+								$('#InroomType').focus();
+							}
+						}
+					}
+				});
+			}
 		});
 	}
 
 	function delTyperoom(num) {
-		$('.btn_delTyperoom').click(function(){
-			// var chk =  confirm('คุณต้องการย้อนกลับ ใช่หรือไม่ ?');
-			// if(chk==true){
-			// 	$('#typeRoom'+num).remove();
-			// }else{
-			// 	return false;
-			// }
+		$('#btn_deltyperoom'+num).click(function(){
 			$("<div title='แจ้งเตือน !'> คุณต้องการลบข้อมูล </div>").dialog({
 				modal: true,
 				buttons: [{
@@ -70,7 +81,7 @@
 				},
 				{
 					text: "No",
-					'class': 'btn btn-primary',
+					'class': 'btn btn-danger',
 					icons: {
 						primary: "ui-icon-closethick"
 					},
