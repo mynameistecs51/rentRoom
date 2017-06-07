@@ -1,4 +1,5 @@
 <?php echo $header; ?>
+
 <div class="panel panel-primary">
 	<div class="panel-heading"><b> เพิ่มประเภทห้องพัก </b></div>
 	<div class="panel-body ">
@@ -47,7 +48,7 @@
 				$('#InroomType').val('');
 				delTyperoom(row);
 			}else{
-				$("<div title='แจ้งเตือน !'> กรุณากรอกข้อมูลประเภทห้องพัก </div>").dialog({
+				$("<div title='แจ้งเตือน !'> <i class=\"fa fa-info-circle fa-2x  text-info\" aria-hidden=\"true\"></i> กรุณากรอกข้อมูลประเภทห้องพัก </div>").dialog({
 					modal: true,
 					buttons: {
 						'OK': {
