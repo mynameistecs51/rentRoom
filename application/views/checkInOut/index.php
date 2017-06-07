@@ -49,13 +49,13 @@
 				</div>
 			</div>
 
-			<table class="col-sm-12" border="1" bordercolor=" #ccffff"  style="width: 100%;overflow-y: auto;overflow-x: auto;display: block;padding:0px; " >
+			<table class="table table-hover col-sm-12 " border="1" style="width: 100%;overflow-y: auto;overflow-x: auto;display: block;" >
 				<thead border="1"  >
 					<tr class="alert-info" >
 						<th style="text-align: center;padding: 3px;" > ห้อง</th>
 						<th style="text-align: center;padding: 3px;" > ราคา</th>
 						<?php for ($i=$startDay; $i <= $lastDay; $i++) :?>
-							<th style="text-align: center;"> <span style="font-size: 10px;">วันที่</span><br><?php echo $i; ?></th>
+							<th style="text-align: center;"> <span style="font-size: 9px;">วันที่</span><br><?php echo $i; ?></th>
 						<?php endfor ?>
 					</tr>
 				</thead>
@@ -63,6 +63,24 @@
 					<tr >
 						<td style="text-align: center;" class="alert-default">101</td>
 						<td style="text-align: center;">550</td>
+						<?php for ($i=$startDay; $i <= $lastDay; $i++) :?>
+							<td style="text-align: center;padding: 3px;" >
+								<button class="btn btn-default btn-xs btn_dateRoom" data-numRoom='<?php echo $i ?>'><i class="fa fa-bed" aria-hidden="true"></i></button>
+							</td>
+						<?php endfor; ?>
+					</tr>
+					<tr >
+						<td style="text-align: center;" class="alert-default">201</td>
+						<td style="text-align: center;">250</td>
+						<?php for ($i=$startDay; $i <= $lastDay; $i++) :?>
+							<td style="text-align: center;padding: 3px;" >
+								<button class="btn btn-default btn-xs btn_dateRoom" data-numRoom='<?php echo $i ?>'><i class="fa fa-bed" aria-hidden="true"></i></button>
+							</td>
+						<?php endfor; ?>
+					</tr>
+					<tr >
+						<td style="text-align: center;" class="alert-default">301</td>
+						<td style="text-align: center;">250</td>
 						<?php for ($i=$startDay; $i <= $lastDay; $i++) :?>
 							<td style="text-align: center;padding: 3px;" >
 								<button class="btn btn-default btn-xs btn_dateRoom" data-numRoom='<?php echo $i ?>'><i class="fa fa-bed" aria-hidden="true"></i></button>
