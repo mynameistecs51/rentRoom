@@ -80,7 +80,7 @@ class Template
 						<div class="panel-heading"><i class="glyphicon glyphicon-cog"></i> ตั้งค่าข้อมูล</div>
 						<div class="panel-body ">
 							<div>'.anchor("management/createTypeRoom", "<i class=\"glyphicon glyphicon-hand-right\"></i> ประเภท").'</div>
-							<div>'.anchor("#", "<i class=\"glyphicon glyphicon-hand-right\"></i> ห้องพัก").'</div>
+							<div>'.anchor("management/createRoom", "<i class=\"glyphicon glyphicon-hand-right\"></i> ห้องพัก").'</div>
 							<div>'.anchor("#", "<i class=\"glyphicon glyphicon-hand-right\"></i> ออกจากระบบ").'</div>
 						</div>
 					</div>
@@ -111,15 +111,15 @@ class Template
 
 	public static function getMonth() {
 		return  array(
-			'1' => 'มกราคม',
-			'2' => 'กุมภาพันธ์',
-			'3' => 'มีนาคม',
-			'4' => 'เมษายน',
-			'5' => 'พฤษภาคม',
-			'6' => 'มิถุนายน',
-			'7' => 'กรกฏาคม',
-			'8' => 'สิงหาคม',
-			'9' => 'กันยายน',
+			'01' => 'มกราคม',
+			'02' => 'กุมภาพันธ์',
+			'03' => 'มีนาคม',
+			'04' => 'เมษายน',
+			'05' => 'พฤษภาคม',
+			'06' => 'มิถุนายน',
+			'07' => 'กรกฏาคม',
+			'08' => 'สิงหาคม',
+			'09' => 'กันยายน',
 			'10' => 'ตุลาคม',
 			'11' => 'พฤศจิกายน',
 			'12' => 'ธันวาคม'

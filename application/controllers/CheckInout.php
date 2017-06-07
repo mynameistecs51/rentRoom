@@ -6,15 +6,18 @@ class CheckInout extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-
+		$now = new DateTime(null, new DateTimeZone('Asia/Bangkok'));
+		$this->dt_now = $now->format('Y-m-d H:i:s');
+		$this->datenow = $now->format('d/m/').($now->format('Y')+543);
 	}
 
 	public function index()
 	{
-		$mounth = empty($this->input->post('mounth'))?date('m'):$this->input->post('mounth');
-		$year =  empty($this->input->post('year'))?date('m'):$this->input->post('year');
+		$mounth = (empty($this->input->post('mounth')))?date('m'):$this->input->post('mounth');
+		$year =  (empty($this->input->post('year')))?date('Y'):$this->input->post('year');
 		$this->data['startDay'] = date('1',strtotime(date('y-m-d')));
-		$this->data['lastDay'] = date('t',strtotime(date($year.'-'.$mounth.'-d')));
+		$this->data['lastDay'] = date('t',strtotime(date('y'.'-'.$mounth.'-d')));
+		$this->data['mounth'] = $mounth;
 		$this->Main();
 		$this->load->view('checkInOut/index',$this->data);
 	}

@@ -25,6 +25,12 @@ class Management extends CI_Controller {
 		$this->load->view('management/CreateTyperoom',$this->data);
 	}
 
+	public function CreateRoom()
+	{
+		$this->Main();
+		$this->load->view('management/CreateRoom',$this->data);
+	}
+
 }
 
 /* End of file Management.php */
