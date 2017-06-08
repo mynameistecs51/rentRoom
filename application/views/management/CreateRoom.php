@@ -51,19 +51,19 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td>
+							<td class="col-sm-4">
 								<div class="cols-sm-12">
 									<div class="col-sm-12 roomStanddard"> <!--  show data room Standdard -->	</div>
 								</div>
 							</td>
 							<td>
 								<div class="cols-sm-12">
-									<div class="col-sm-12 roomStanddard"> <!--  show data room Standdard -->	</div>
+									<div class="col-sm-12 roomVIP"> <!--  show data room Standdard -->	</div>
 								</div>
 							</td>
 							<td>
 								<div class="cols-sm-12">
-									<div class="col-sm-12 roomStanddard"> <!--  show data room Standdard -->	</div>
+									<div class="col-sm-12 roomVIP1"> <!--  show data room Standdard -->	</div>
 								</div>
 							</td>
 						</tr>
@@ -81,7 +81,7 @@
 	$(function(){
 
 		$('.btn_addRoom').click(function(){
-			CreateRoom('#Inroom','.btn_delRoom','.roomStanddard');
+			CreateRoom('#Inroom','btn_delRoom','.roomStanddard');
 		});
 
 	});
@@ -90,11 +90,11 @@
 		console.log($(inputID).val());
 		// $('.btn_addRoom').click(function(){
 			if($(inputID).val() != ""){
-				var  row=$(classBtn).length+1;
-				var  html  = '<div class="typeRoom col-sm-12" ID="typeRoom'+row+'" style="margin-top:10px;font-size:15px;">';
-				html += '<div class="col-sm-12 alert-info" >';
-				html += '<div> หมายเลขห้อง : '+$(inputID).val() ;
-				html += '<button class="btn btn-danger btn-sm pull-right classBtn" id= '+classBtn+row+'" style="right:0px;"><span class="glyphicon glyphicon-minus"></span></botton>';
+				var  row=$('.'+classBtn).length+1;
+				var  html  = '<div class="typeRoom col-sm-12" ID="typeRoom'+row+'" style="margin-top:10px;font-size:20px;">';
+				html += '<div class=" alert-info" >';
+				html += '<div> ห้องพัก : '+$(inputID).val() ;
+				html += '<button class="btn btn-danger btn-sm pull-right '+classBtn+'" id= '+classBtn+row+' style="right:0px;"><span class="glyphicon glyphicon-minus"></span></botton>';
 				html += '</div>';
 				html += '</div>';
 				$(show).append(html);

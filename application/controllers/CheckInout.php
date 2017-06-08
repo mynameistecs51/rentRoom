@@ -30,6 +30,12 @@ class CheckInout extends CI_Controller {
 		$this->data['getYear'] = $this->template->getYear();
 	}
 
+	public function checkIn()
+	{
+		$this->Main();
+		$this->load->view('checkInOut/Checkin',$this->data);
+	}
+
 }
 
 /* End of file CheckInout.php */

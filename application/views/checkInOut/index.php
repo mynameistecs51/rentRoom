@@ -19,7 +19,7 @@
 					<i class="fa fa-square-o" aria-hidden="true" ></i> = ว่าง,
 					<i class="fa fa-square-o" aria-hidden="true" style="background-color:red;color:red;"></i> = อยู่,
 					<i class="fa fa-square-o" aria-hidden="true" style="background-color:green;color:green;"></i> = ทำความสะอาด
-					<div class="text-primary">
+					<div class="text-primary line-height">
 						<u> วันที่ <?php echo date('j').' เดือน '.$getMonth[$mounth].' พ.ศ. '.$getYear[date('Y')];?> </u>
 					</div>
 				</div>
@@ -49,13 +49,13 @@
 				</div>
 			</div>
 
-			<table class="table table-hover col-sm-12 " border="1" style="width: 100%;overflow-y: auto;overflow-x: auto;display: block;" >
+			<table class="table table-hover table-bordered col-sm-12 "  style="width: 100%;overflow-y: auto;overflow-x: auto;display: block;" >
 				<thead border="1"  >
 					<tr class="alert-info" >
 						<th style="text-align: center;padding: 3px;" > ห้อง</th>
 						<th style="text-align: center;padding: 3px;" > ราคา</th>
 						<?php for ($i=$startDay; $i <= $lastDay; $i++) :?>
-							<th style="text-align: center;"> <span style="font-size: 9px;">วันที่</span><br><?php echo $i; ?></th>
+							<th style="text-align: center;padding:3px;"> <span style="font-size: 9px;">วันที่</span><br><?php echo $i; ?></th>
 						<?php endfor ?>
 					</tr>
 				</thead>
@@ -89,53 +89,28 @@
 					</tr>
 				</tbody>
 			</table>
-
-
-					<!-- <div class="row form_input" style="text-align:left; margin-bottom:20px">
-						<div class="form-group ">
-							<div class="col-sm-2" >
-								<p>คำนำหน้าชื่อ</p>
-								<p class="required" style="width: 70%;">*</p>
-								<label><input type="radio" name="sex" value="male"> ชาย</label>
-								<label><input type="radio" name="sex" value="Female"> หญิง</label>
-							</div>
-							<div class="col-sm-3" >
-								<p>ชื่อ </p>
-								<p class="required">*</p>
-								<input type="text" class="form-control"  name="firstname_th" placeholder="ชื่อ" required>
-							</div>
-							<div class="col-sm-3" >
-								<p>นามสกุล </p>
-								<p class="required">*</p>
-								<input type="text" class="form-control"  name="lastname_th" placeholder="สกุล" required>
-							</div>
-						</div>
-					</div> -->
-
-				</div>
-			</div>
 		</div>
-		<?php echo $footer; ?>
+	</div>
+</div>
+<?php echo $footer; ?>
 
-		<script type="text/javascript">
-			$(function(){
-				$('.btn_dateRoom').click(function(){
-					$("<div title='บันทึกรายการ'>" + "ห้อง 101 วันที"+$(this).data('numroom')+"</div>").dialog({
-						modal: true,
-							// draggable: false,
-							buttons: {
-								'ok': {
-									'text': 'OK',
-									'prepend': '<b class="glyphicon glyphicon-ok"></b> ',
-									'class': 'btn btn-primary',
-									// 'style':'background-color:blue',
-									'click': function(){
-										$(this).dialog('close');
-									}
-								}
-							}
-						});
-				});
+<script type="text/javascript">
+	$(function(){
+		$('.btn_dateRoom').click(function(){
+			$("<div title='บันทึกรายการ'>" + "ห้อง 101 วันที"+$(this).data('numroom')+"</div>").dialog({
+				modal: true,
+				buttons: {
+					'ok': {
+						'text': 'OK',
+						'prepend': '<b class="glyphicon glyphicon-ok"></b> ',
+						'class': 'btn btn-primary',
+						'click': function(){
+							$(this).dialog('close');
+						}
+					}
+				}
 			});
-		</script>
+		});
+	});
+</script>
 
