@@ -8,7 +8,7 @@ class Dashboard extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		redirect('checkInOut','refresh');
+		redirect('CheckInOut','refresh');
 	}
 
 	public function index()

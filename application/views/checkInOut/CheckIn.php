@@ -119,5 +119,16 @@
 			<p class="required">*</p>
 			<input type="text" class="form-control"  name="lastname_th" placeholder="สกุล" required>
 		</div>
+		<div class=" col-sm-3" >
+			<p>รูปบัตรประชาชน </p>
+			<p class="required">*</p>
+			<input type="text" class="form-control"  name="lastname_th" placeholder="สกุล" required>
+		</div>
+		<div class="col-sm-12 clearfix"> </div>
+		<div class="col-xs-8 col-md-3">
+			<a href="#" class="thumbnail">
+				<img src="<?php echo base_url('assets/images/no-image.jpg'); ?>" alt="...">
+			</a>
+		</div>
 	</div>
 </div>
