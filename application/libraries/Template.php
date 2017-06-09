@@ -36,6 +36,8 @@ class Template
 			<!-- Custom Fonts -->
 			<link href="'.$base_url.'assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+			<script src="'.$base_url.'assets/js/jquery.min.js"></script>
+
 		</head>
 		<body>
 			<!-- Navigation -->
@@ -97,12 +99,11 @@ class Template
 				</div> <!-- /. end content body -->
 			</div>	<!-- end /. row -->
 			<!-- Bootstrap Core JS -->
-			<script src="'.$base_url.'assets/js/jquery.min.js"></script>
 			<script src="'.$base_url.'assets/js/jquery.js"></script>
 			<script src="'.$base_url.'assets/js/bootstrap.min.js"></script>
 
 			<!-- Juqery UI -->
-			<script src="'.$base_url.'assets/js/jquery-ui.min.js"></script>
+			<!-- <script src="'.$base_url.'assets/js/jquery-ui.min.js"></script> -->
 
 		</body>
 		</html>
