@@ -57,7 +57,7 @@ class Template
 	<body>
 		<!-- Navigation -->
 		<div class="row"  >
-			<nav class="navbar navbar-inverse">
+			<nav class="navbar navbar-primary">
 				<div class="container-fluid">
 					<!-- Brand and toggle get grouped for better mobile display -->
 					<div class="navbar-header">
@@ -76,108 +76,78 @@ class Template
 					</div><!-- /.navbar-collapse -->
 				</div><!-- /.container-fluid -->
 			</nav>
+			<!-- show body -->
+			<div class="content col-sm-12" >
+				';
+			}
 
-			<div class="row"  style="background-color:none;padding: 20px;margin-top: 50px;">
+			public function getFooter($base_url)
+			{
+				return '
+			</div> <!-- /. end content body -->
+		</div>	<!-- end /. row -->
+		<!-- Bootstrap Core JS -->
+		<script src="'.$base_url.'assets/js/jquery.js"></script>
+		<script src="'.$base_url.'assets/js/bootstrap.min.js"></script>
 
-				<div class="content col-sm-2" >  <!--   menu left -->
-					<div class="panel panel-primary">
-						<div class="panel-heading"><i class="glyphicon glyphicon-home" aria-hidden="true"></i> บันทึกประจำวัน</div>
-						<div class="panel-body ">
-							<div>'.anchor("/", "<i class=\"glyphicon glyphicon-hand-right\"></i> Check In/Out").'</div>
-						</div>
-					</div>
+		<!-- Juqery UI -->
+		<!-- <script src="'.$base_url.'assets/js/jquery-ui.min.js"></script> -->
 
-					<div class="panel panel-info">
-						<div class="panel-heading"><i class="glyphicon glyphicon-list-alt"></i> รายงาน</div>
-						<div class="panel-body ">
-							<div>'.anchor("#", "<i class=\"glyphicon glyphicon-hand-right\"></i> สรุปรายได้").'</div>
-							<div>'.anchor("#", "<i class=\"glyphicon glyphicon-hand-right\"></i> ทรัพย์สินเสียหาย").'</div>
-							<div>'.anchor("#", "<i class=\"glyphicon glyphicon-hand-right\"></i> xxx").'</div>
-						</div>
-					</div>
+	</body>
+	</html>
+	';
+}
 
-					<div class="panel panel-warning">
-						<div class="panel-heading"><i class="glyphicon glyphicon-cog"></i> ตั้งค่าข้อมูล</div>
-						<div class="panel-body ">
-							<div>'.anchor("management/createTypeRoom", "<i class=\"glyphicon glyphicon-hand-right\"></i> ประเภท").'</div>
-							<div>'.anchor("management/createRoom", "<i class=\"glyphicon glyphicon-hand-right\"></i> ห้องพัก").'</div>
-							<div>'.anchor("#", "<i class=\"glyphicon glyphicon-hand-right\"></i> ออกจากระบบ").'</div>
-						</div>
-					</div>
-				</div> <!-- ./end content menu left -->
+public function menu()
+{
+	return '
+	<ul class="nav navbar-nav navbar-right">
+		<li><a href="#">เข้าพัก</a></li>
+		<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> รายงาน <span class="caret"></span></a>
+			<ul class="dropdown-menu">
+				<li><a href="#">สรุปรายได้</a></li>
+				<li><a href="#">ทรัพย์สินเสียหาย</a></li>
+			</ul>
+		</li>
+		<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ตั้งค่า <span class="caret"></span></a>
+			<ul class="dropdown-menu">
+				<li><a href="#">ประเภทห้องพัก</a></li>
+				<li><a href="#">ห้องพัก</a></li>
+			</ul>
+		</li>
+		<li><a href="#"> ออกจากระบบ</a></li>
+	</ul>
+	';
+}
 
-				<!-- show body -->
-				<div class="content col-sm-10" >
-					';
-				}
+public  function getMonth() {
+	return  array(
+		'01' => 'มกราคม',
+		'02' => 'กุมภาพันธ์',
+		'03' => 'มีนาคม',
+		'04' => 'เมษายน',
+		'05' => 'พฤษภาคม',
+		'06' => 'มิถุนายน',
+		'07' => 'กรกฏาคม',
+		'08' => 'สิงหาคม',
+		'09' => 'กันยายน',
+		'10' => 'ตุลาคม',
+		'11' => 'พฤศจิกายน',
+		'12' => 'ธันวาคม'
+		);
+}
 
-				public function getFooter($base_url)
-				{
-					return '
-				</div> <!-- /. end content body -->
-			</div>	<!-- end /. row -->
-			<!-- Bootstrap Core JS -->
-			<script src="'.$base_url.'assets/js/jquery.js"></script>
-			<script src="'.$base_url.'assets/js/bootstrap.min.js"></script>
+public static function getYear() {
+	$arr = array();
+	$y = date('Y')-2;
 
-			<!-- Juqery UI -->
-			<!-- <script src="'.$base_url.'assets/js/jquery-ui.min.js"></script> -->
-
-		</body>
-		</html>
-		';
+	for ($i = $y; $i <= ($y + 4); $i++) {
+		$arr[$i] = $i+543;
 	}
-
-	public function menu()
-	{
-		return '
-		<ul class="nav navbar-nav navbar-right">
-			<li><a href="#">เข้าพัก</a></li>
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> รายงาน <span class="caret"></span></a>
-				<ul class="dropdown-menu">
-					<li><a href="#">สรุปรายได้</a></li>
-					<li><a href="#">ทรัพย์สินเสียหาย</a></li>
-				</ul>
-			</li>
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ตั้งค่า <span class="caret"></span></a>
-				<ul class="dropdown-menu">
-					<li><a href="#">ประเภทห้องพัก</a></li>
-					<li><a href="#">ห้องพัก</a></li>
-				</ul>
-			</li>
-			<li><a href="#"> ออกจากระบบ</a></li>
-		</ul>
-		';
-	}
-
-	public  function getMonth() {
-		return  array(
-			'01' => 'มกราคม',
-			'02' => 'กุมภาพันธ์',
-			'03' => 'มีนาคม',
-			'04' => 'เมษายน',
-			'05' => 'พฤษภาคม',
-			'06' => 'มิถุนายน',
-			'07' => 'กรกฏาคม',
-			'08' => 'สิงหาคม',
-			'09' => 'กันยายน',
-			'10' => 'ตุลาคม',
-			'11' => 'พฤศจิกายน',
-			'12' => 'ธันวาคม'
-			);
-	}
-
-	public static function getYear() {
-		$arr = array();
-		$y = date('Y')-2;
-
-		for ($i = $y; $i <= ($y + 4); $i++) {
-			$arr[$i] = $i+543;
-		}
-		return $arr;
-	}
+	return $arr;
+}
 
 }
 

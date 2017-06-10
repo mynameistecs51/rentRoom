@@ -1,7 +1,7 @@
 <?php echo $header; ?>
 
-<div class="panel panel-primary"  >
-	<div class="panel-heading"><i class="glyphicon glyphicon-list"></i> บันทึกการเข้าพัก</div>
+<!-- <div class="panel panel-primary"  style="padding:10px;"> -->
+	<!-- <div class="panel-heading"><i class="glyphicon glyphicon-list"></i> บันทึกการเข้าพัก</div> -->
 	<div class="navbar navbar-default" style="padding-top: 5px;">
 		<div class="form-inline">
 			<div class="form-group col-sm-6">
@@ -40,7 +40,7 @@
 			<div class="col-sm-12 alert-warning text-center"><h3>ชั้น 1</h3></div>
 			<div class=" col-sm-12 alert-info"  style="padding:20px;">
 				<?php	for ($i = 1; $i <= 24; ++$i) :?>
-					<div class="col-sm-2 ">
+					<div class="col-sm-1 ">
 						<?php echo  $sho = ($i == 5 )?
 						'<a  tabindex="0"  class="btn btn-danger col-sm-12 btn_room"  role="button"  data-num_room="'.$i.'"  style="margin:10px;" ><i class="fa fa-bed fa-lg" aria-hidden="true"></i><h5>A'.$i.'  <i class="fa fa-square" aria-hidden="true" style="background-color:orange;color:orange;"></i></h5></a>'
 						:
@@ -50,7 +50,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+<!-- </div> -->
 <div class="div_modal"> <!-- show form modal --> </div>
 <?php echo $footer; ?>
 <script type="text/javascript">
