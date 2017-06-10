@@ -86,7 +86,7 @@
 				<span class="button-checkbox ">
 					<button type="button" class="btn" data-color="danger" style="width:120px;">
 						<i class="fa fa-bed fa-2x" aria-hidden="true"></i>
-						<h4>205</h4>
+						<h4>205 VIP</h4>
 					</button>
 					<input type="checkbox" class="hidden check_room" name="check_room[]" id="room205" value="room205" />
 				</span>
@@ -106,9 +106,53 @@
 				// console.log($('#'+r.id+':checked').val());
 				roomNumber.push('ห้อง '+$('#'+r.id+':checked').val());
 			});
-			alert(roomNumber);
+			// alert(roomNumber);
+			load_page('<?php echo $form_CheckIn; ?>','.:: เข้าพัก ::.','#');
 		});
+
+		function load_page(loadUrl,texttitle,urlsend){
+			var screenname= texttitle;
+			var url = loadUrl;
+			var n=0;
+			$('.div_modal').html('');
+			modal_form(n,screenname,urlsend);
+			$('#myModal'+n+' .modal-body').html('<img id="ajaxLoaderModal" src="<?php echo base_url(); ?>assets/images/loader.gif"/>');
+			var modal = $('#myModal'+n), modalBody = $('#myModal'+n+' .modal-body');
+			modal.on('show.bs.modal', function () {
+				modalBody.load(url);
+			}).modal({backdrop: 'static',keyboard: true});
+			setInterval(function(){$('#ajaxLoaderModal').remove()},5100);
+		}
+
+		function modal_form(n,screenname,url)
+		{
+			var div='';
+			div+='<form action="'+url+'"  role="form" data-toggle="validator" id="form" method="post" enctype="multipart/form-data">';
+			div+='<!-- Modal -->';
+			div+='<div class="modal modal-wide fade" id="myModal'+n+'" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">';
+			div+='<div class="modal-dialog" style="width:90%;">';
+			div+='<div class="modal-content">';
+			div+='<div class="modal-header" style="background:#d9534f;color:#FFFFFF;">';
+			div+='<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>';
+			div+='<h4 class="modal-title">'+screenname+'</h4>';
+			div+='</div>';
+			div+='<div class="modal-body">';
+			div+='</div>';
+			div+='<div class="modal-footer" style="text-align:center; background:#F6CECE;">';
+			div+='<button type="submit" id="save" class="btn btn-modal"><span class="   glyphicon glyphicon-floppy-saved"> บันทึก</span></button>';
+			div+='<button type="reset" class="btn btn-modal" data-dismiss="modal"><span class="   glyphicon glyphicon-floppy-remove"> ยกเลิก</span></button>';
+			div+='</div>';
+			div+='</div><!-- /.modal-content -->';
+			div+='</div><!-- /.modal-dialog -->';
+			div+='</div><!-- /.modal -->';
+			div+='</form>';
+			$('.div_modal').html(div);
+		}
+
 	});
+	/*
+	*-------------------------check button room  ----------------
+	*/
 	$(function () {
 		$('.button-checkbox').each(function () {
 

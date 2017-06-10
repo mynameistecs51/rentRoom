@@ -129,16 +129,40 @@
 		<div class=" col-sm-3" >
 			<p >รูปบัตรประชาชน </p>
 			<p class="required">*</p>
-			<input type="text" class="form-control"  name="lastname_th" placeholder="สกุล" required>
+			<a  id="snap" class="btn btn-primary"><i class="fa fa-camera"></i> ถ่ายภาพ</a>
 		</div>
 		<div class="col-sm-12 clearfix"> </div>
-		<div class="col-xs-8 col-md-3">
-			<a href="#" class="thumbnail">
-				<img src="<?php echo base_url('assets/images/no-image.jpg'); ?>" alt="...">
-			</a>
+		<div class="col-md-3 bg-primary">
+			<video id="video" width="600" height="400" autoplay></video>
+			<!-- <a href="#" class="thumbnail">
+				<img src="<?php //echo base_url('assets/images/no-image.jpg'); ?>" alt="...">
+			</a> -->
 		</div>
-		<div class="col-md-3">
-			<video id="video" width="640" height="480" autoplay></video>
+		<div class="col-sm-3 bg-default">
+			<canvas id="canvas" width="640" height="480"></canvas>
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+	// Grab elements, create settings, etc.
+	var video = document.getElementById('video');
+
+// Get access to the camera!
+if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    // Not adding `{ audio: true }` since we only want video now
+    navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+    	video.src = window.URL.createObjectURL(stream);
+    	video.play();
+    });
+  }
+
+  // Elements for taking the snapshot
+  var canvas = document.getElementById('canvas');
+  var context = canvas.getContext('2d');
+  var video = document.getElementById('video');
+
+// Trigger photo take
+document.getElementById("snap").addEventListener("click", function() {
+	context.drawImage(video, 0, 0, 640, 480);
+});
+</script>
