@@ -26,7 +26,7 @@ class Template
 			<title>ระบบห้องพัก</title>
 
 			<!-- Bootstrap Core CSS -->
-			<link href="'.$base_url.'assets/css/bootstrap.css" rel="stylesheet">
+			<!-- <link href="'.$base_url.'assets/css/bootstrap.css" rel="stylesheet"> -->
 			<link href="'.$base_url.'assets/css/bootstrap.min.css" rel="stylesheet">
 			<link href="'.$base_url.'assets/css/bootstrap-theme.min.css" rel="stylesheet">
 
@@ -47,6 +47,8 @@ class Template
 				font-family: TH_Charmonman;
 				font-size: 30px;
 				padding-left:30px;
+				font-weight: bold;
+				color:white;
 			}
 			body {
 				background:#F7F7F7;
@@ -57,7 +59,7 @@ class Template
 	<body>
 		<!-- Navigation -->
 		<div class="row"  >
-			<nav class="navbar navbar-primary">
+			<nav class="navbar bg-primary " >
 				<div class="container-fluid">
 					<!-- Brand and toggle get grouped for better mobile display -->
 					<div class="navbar-header">
@@ -71,7 +73,7 @@ class Template
 					</div>
 
 					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1" >
 						'.$this->menu().'
 					</div><!-- /.navbar-collapse -->
 				</div><!-- /.container-fluid -->
@@ -100,24 +102,26 @@ class Template
 
 public function menu()
 {
+	// HOME 	BOOKING	CHECKIN	CHECKOUT	CASH	REPORT	SETTING	LOGOUT
 	return '
 	<ul class="nav navbar-nav navbar-right">
-		<li><a href="#">เข้าพัก</a></li>
+		<li ><a href="#" style="color:#000;font-weight:bold;"> HOME </a></li>
+		<li><a href="#"  style="color:#000;font-weight:bold;">เข้าพัก</a></li>
 		<li class="dropdown">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> รายงาน <span class="caret"></span></a>
+			<a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"  style="color:#000;font-weight:bold;"> รายงาน <span class="caret"></span></a>
 			<ul class="dropdown-menu">
-				<li><a href="#">สรุปรายได้</a></li>
-				<li><a href="#">ทรัพย์สินเสียหาย</a></li>
+				<li><a href="#"  style="color:#000;font-weight:bold;">สรุปรายได้</a></li>
+				<li><a href="#"  style="color:#000;font-weight:bold;">ทรัพย์สินเสียหาย</a></li>
 			</ul>
 		</li>
 		<li class="dropdown">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ตั้งค่า <span class="caret"></span></a>
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"  style="color:#000;font-weight:bold;">ตั้งค่า <span class="caret"></span></a>
 			<ul class="dropdown-menu">
-				<li><a href="#">ประเภทห้องพัก</a></li>
-				<li><a href="#">ห้องพัก</a></li>
+				<li><a href="#"  style="color:#000;font-weight:bold;">ประเภทห้องพัก</a></li>
+				<li><a href="#"  style="color:#000;font-weight:bold;">ห้องพัก</a></li>
 			</ul>
 		</li>
-		<li><a href="#"> ออกจากระบบ</a></li>
+		<li><a href="#"  style="color:#000;font-weight:bold;"> ออกจากระบบ</a></li>
 	</ul>
 	';
 }
