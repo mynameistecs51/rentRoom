@@ -23,6 +23,20 @@
 
 	<div class="panel-body " >
 		<div class="row">
+			<div class="container">
+				<div class="col-sm-12 ">
+					<div class="col-sm-12 pull-right">
+						<!-- <p class="pull-right"> -->
+							<button  class="btn btn-danger  btn-md col-sm-3  btn_checkin" style="margin-top:5px;" > CheckIn</button>
+							<button  class="btn btn-default  btn-md col-sm-3 btn_checkout" style="margin-top:5px;" > CheckOut</button>
+							<button  class="btn btn-success btn-md  col-sm-3 btn_clean" style="margin-top:5px;"  > Clean</button>
+							<button  class="btn btn-warning btn-md  col-sm-3 btn_reservation" style="margin-top:5px;"  > จอง</button>
+							<button  class="btn btn-primary btn-md  col-sm-3 btn_reservation" style="margin-top:5px;"  >  ย้ายห้อง</button>
+						<!-- </p> -->
+					</div>
+				</div>
+			</div>
+			<div class="cleanfix"></div>
 			<div class="col-sm-12 alert-warning text-center"><h3>ชั้น 1</h3></div>
 			<div class=" col-sm-12 alert-info"  style="padding:20px;">
 				<?php	for ($i = 1; $i <= 24; ++$i) :?>

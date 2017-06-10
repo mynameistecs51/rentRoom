@@ -138,7 +138,7 @@
 			</a>
 		</div>
 		<div class="col-md-3">
-			<input type="file" accept="image/*;capture=camera" id="capture">
+			<video id="video" width="640" height="480" autoplay></video>
 		</div>
 	</div>
 </div>
