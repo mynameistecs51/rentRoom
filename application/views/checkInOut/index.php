@@ -42,80 +42,53 @@
 			</p>
 		</div>
 		<div class="cleanfix"></div>
-		<!-- <div class="col-sm-12 alert-warning text-left"><h3>ชั้น 1</h3></div> -->
-		<h3>FLOOR 1</h3>
-		<div class=" col-sm-12 alert-default"  style="padding:20px;">
+		<!-- <div class="col-sm-12 alert-warning text-left"><h3>ชั้น 1 </div></div> -->
+		<h3>FLOOR 1 </h3>
+		<div class=" col-sm-12 alert-default"  >
 			<?php	//for ($i = 1; $i <= 24; ++$i) :?>
-			<div class="col-sm-1 ">
+			<div class="col-sm-1 " style="margin-left:10px;">
 				<span class="button-checkbox ">
-					<button type="button" class="btn" data-color="danger" style="margin:10px;"><i class="fa fa-bed fa-3x " aria-hidden="true"></i><h5>201</h5></h3></button>
-					<input type="checkbox" class="hidden checkbox_room" />
+					<button type="button" class="btn" data-color="danger" style="width:120px;">
+						<i class="fa fa-bed fa-2x" aria-hidden="true">&nbsp;</i><i class="fa fa-bed fa-2x" aria-hidden="true"></i>
+						<h4>201</h4>
+					</button>
+					<input type="checkbox" class="hidden check_room" name="check_room[]" id="room201" value="room201" />
 				</span>
 			</div>
-			<div class="col-sm-1 ">
+			<div class="col-sm-1 " style="margin-left:10px;">
 				<span class="button-checkbox ">
-					<button type="button" class="btn" data-color="danger" style="margin:10px;"><i class="fa fa-bed fa-3x " aria-hidden="true"></i><h5>202</h5></h3></button>
-					<input type="checkbox" class="hidden checkbox_room" />
+					<button type="button" class="btn" data-color="danger" style="width:120px;">
+						<i class="fa fa-bed fa-2x" aria-hidden="true"></i>
+						<h4>202</h4>
+					</button>
+					<input type="checkbox" class="hidden check_room" name="check_room[]" id="room202" value="room202" />
 				</span>
 			</div>
-			<div class="col-sm-1 ">
+			<div class="col-sm-1 " style="margin-left:10px;">
 				<span class="button-checkbox ">
-					<button type="button" class="btn" data-color="danger" style="margin:10px;"><i class="fa fa-bed fa-3x " aria-hidden="true"></i><h5>203</h5></h3></button>
-					<input type="checkbox" class="hidden checkbox_room" />
+					<button type="button" class="btn" data-color="danger" style="width:120px;">
+						<i class="fa fa-bed fa-2x" aria-hidden="true"></i>
+						<h4>203</h4>
+					</button>
+					<input type="checkbox" class="hidden check_room" name="check_room[]" id="room203" value="room203" />
 				</span>
 			</div>
-			<div class="col-sm-1 ">
+			<div class="col-sm-1 " style="margin-left:10px;">
 				<span class="button-checkbox ">
-					<button type="button" class="btn" data-color="danger" style="margin:10px;"><i class="fa fa-bed fa-3x " aria-hidden="true"></i><h5>204</h5></h3></button>
-					<input type="checkbox" class="hidden checkbox_room" />
+					<button type="button" class="btn" data-color="danger" style="width:120px;">
+						<i class="fa fa-bed fa-2x" aria-hidden="true">&nbsp;</i><i class="fa fa-bed fa-2x" aria-hidden="true"></i>
+						<h4>204</h4>
+					</button>
+					<input type="checkbox" class="hidden check_room" name="check_room[]" id="room204" value="room204" />
 				</span>
 			</div>
-			<div class="col-sm-1 ">
+			<div class="col-sm-1 " style="margin-left:10px;">
 				<span class="button-checkbox ">
-					<button type="button" class="btn" data-color="danger" style="margin:10px;"><i class="fa fa-bed fa-3x " aria-hidden="true"></i><h5>205</h5></h3></button>
-					<input type="checkbox" class="hidden checkbox_room" />
-				</span>
-			</div>
-			<div class="col-sm-1 ">
-				<span class="button-checkbox ">
-					<button type="button" class="btn" data-color="danger" style="margin:10px;"><i class="fa fa-bed fa-3x " aria-hidden="true"></i><h5>206</h5></h3></button>
-					<input type="checkbox" class="hidden checkbox_room" />
-				</span>
-			</div>
-			<div class="col-sm-1 ">
-				<span class="button-checkbox ">
-					<button type="button" class="btn" data-color="danger" style="margin:10px;"><i class="fa fa-bed fa-3x " aria-hidden="true"></i><h5>207</h5></h3></button>
-					<input type="checkbox" class="hidden checkbox_room" />
-				</span>
-			</div>
-			<div class="col-sm-1 ">
-				<span class="button-checkbox ">
-					<button type="button" class="btn" data-color="danger" style="margin:10px;"><i class="fa fa-bed fa-3x " aria-hidden="true"></i><h5>208</h5></h3></button>
-					<input type="checkbox" class="hidden checkbox_room" />
-				</span>
-			</div>
-			<div class="col-sm-1 ">
-				<span class="button-checkbox ">
-					<button type="button" class="btn" data-color="danger" style="margin:10px;"><i class="fa fa-bed fa-3x " aria-hidden="true"></i><h5>209</h5></h3></button>
-					<input type="checkbox" class="hidden checkbox_room" />
-				</span>
-			</div>
-			<div class="col-sm-1 ">
-				<span class="button-checkbox ">
-					<button type="button" class="btn" data-color="danger" style="margin:10px;"><i class="fa fa-bed fa-3x " aria-hidden="true"></i><h5>210</h5></h3></button>
-					<input type="checkbox" class="hidden checkbox_room" />
-				</span>
-			</div>
-			<div class="col-sm-1 ">
-				<span class="button-checkbox ">
-					<button type="button" class="btn" data-color="danger" style="margin:10px;"><i class="fa fa-bed fa-3x " aria-hidden="true"></i><h5>211</h5></h3></button>
-					<input type="checkbox" class="hidden checkbox_room" />
-				</span>
-			</div>
-			<div class="col-sm-1 ">
-				<span class="button-checkbox ">
-					<button type="button" class="btn" data-color="danger" style="margin:10px;"><i class="fa fa-bed fa-3x " aria-hidden="true"></i><h5>212</h5></h3></button>
-					<input type="checkbox" class="hidden checkbox_room" />
+					<button type="button" class="btn" data-color="danger" style="width:120px;">
+						<i class="fa fa-bed fa-2x" aria-hidden="true"></i>
+						<h4>205</h4>
+					</button>
+					<input type="checkbox" class="hidden check_room" name="check_room[]" id="room205" value="room205" />
 				</span>
 			</div>
 			<?php //endfor?>
@@ -128,10 +101,12 @@
 <script type="text/javascript">
 	$(function(){
 		$('.checked_room').click(function(){
-			// $('.checkbox_room').checked(true).each(function( index ) {
-			// 	alert( index );
-			// });
-			alert($('.checkbox_room').is(':checked').length);
+			var roomNumber=[];
+			$('.check_room:checked').each(function( index,r ) {
+				// console.log($('#'+r.id+':checked').val());
+				roomNumber.push('ห้อง '+$('#'+r.id+':checked').val());
+			});
+			alert(roomNumber);
 		});
 	});
 	$(function () {
