@@ -30,6 +30,7 @@ class CheckInOut extends CI_Controller {
 		$this->data['getMonth'] = $this->template->getMonth();
 		$this->data['getYear'] = $this->template->getYear();
 		$this->data['form_CheckIn'] = base_url().'index.php/'.$this->ctl.'/form_CheckIn/';
+		$this->data['form_CheckOut'] = base_url().'index.php/'.$this->ctl.'/form_CheckOut/';
 	}
 
 	public function form_CheckIn()
@@ -43,6 +44,12 @@ class CheckInOut extends CI_Controller {
 	{
 		echo "<pre>";
 		print_r($_POST);
+	}
+
+	public function form_CheckOut()
+	{
+		$this->Main();
+		$this->load->view('checkInOut/CheckOut',$this->data);
 	}
 
 }

@@ -61,10 +61,10 @@
 				'html':true,
 			}).popover('toggle'),
 			$('.btn_checkin').on('click', function() {
-				load_page("<?php echo $form_CheckIn; ?>"+'','test','#');
+				load_page("<?php echo $form_CheckIn; ?>"+'','.:: CheckIn ::.','#');
 			}),
 			$('.btn_checkout').on('click', function() {
-				alert('ห้อง A'+$(this).data('num_room'));
+				load_page("<?php echo $form_CheckIn; ?>"+'','.:: CheckIn ::.','#');
 			}),
 			$('.btn_clean').on('click', function() {
 				alert('ห้อง A'+$(this).data('num_room'));
