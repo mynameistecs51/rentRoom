@@ -31,6 +31,7 @@ class CheckInOut extends CI_Controller {
 		$this->data['getYear'] = $this->template->getYear();
 		$this->data['form_CheckIn'] = base_url().'index.php/'.$this->ctl.'/form_CheckIn/';
 		$this->data['form_CheckOut'] = base_url().'index.php/'.$this->ctl.'/form_CheckOut/';
+		$this->data['form_reservation'] = base_url().'index.php/'.$this->ctl.'/form_reservation/';
 	}
 
 	public function form_CheckIn()
@@ -50,6 +51,12 @@ class CheckInOut extends CI_Controller {
 	{
 		$this->Main();
 		$this->load->view('checkInOut/CheckOut',$this->data);
+	}
+
+	public function form_reservation()
+	{
+		$this->Main();
+		$this->load->view('checkInOut/Reservation',$this->data);
 	}
 
 }

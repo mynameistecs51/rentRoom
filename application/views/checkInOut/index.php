@@ -60,17 +60,17 @@
 				'</div>',
 				'html':true,
 			}).popover('toggle'),
-			$('.btn_checkin').on('click', function() {
+			$('.btn_checkin').on('click', function() {  //checkOut
 				load_page("<?php echo $form_CheckIn; ?>"+'','.:: CheckIn ::.','#');
 			}),
-			$('.btn_checkout').on('click', function() {
-				load_page("<?php echo $form_CheckIn; ?>"+'','.:: CheckIn ::.','#');
+			$('.btn_checkout').on('click', function() {  //checkIn
+				load_page("<?php echo $form_CheckOut; ?>"+'','.:: CheckOut ::.','#');
 			}),
-			$('.btn_clean').on('click', function() {
+			$('.btn_clean').on('click', function() {  //Clean
 				alert('ห้อง A'+$(this).data('num_room'));
 			}),
-			$('.btn_reservation').on('click', function() {
-				alert('ห้อง A'+$(this).data('num_room'));
+			$('.btn_reservation').on('click', function() {  //Reservation
+				load_page("<?php echo $form_reservation; ?>"+'','.:: Reservation ::.','#');
 			}).popover('hide')
 		});
 	}
