@@ -1,6 +1,6 @@
 <?php echo $header; ?>
 <video id="video" width="640" height="480" autoplay></video>
-<button id="snap">Snap Photo</button>
+<a  id="snap">Snap Photo</a>
 <canvas id="canvas" width="640" height="480"></canvas>
 <?php echo $footer; ?>
 <script type="text/javascript">
