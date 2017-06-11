@@ -1,19 +1,18 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-/*
-* Load First
- */
 
-class Dashboard extends CI_Controller {
+class CheckOut extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		redirect('CheckIn','refresh');
+		$this->ctl = 'CheckOut';
+
 	}
 
 	public function index()
 	{
-
+		$this->Main();
+		$this->load->view('CheckOut/index',$this->data);
 	}
 
 	public function Main()
@@ -24,5 +23,5 @@ class Dashboard extends CI_Controller {
 
 }
 
-/* End of file dashboard.php */
-/* Location: ./application/controllers/dashboard.php */
+/* End of file CheckOut.php */
+/* Location: ./application/controllers/CheckOut.php */

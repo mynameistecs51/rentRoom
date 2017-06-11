@@ -23,12 +23,16 @@ class Template
 			<meta name="description" content="">
 			<meta name="author" content="">
 
-			<title>ระบบห้องพัก</title>
+			<title>จันทร์เจ้า โฮเทล JanJao Hotel</title>
 
 			<!-- Bootstrap Core CSS -->
 			<!-- <link href="'.$base_url.'assets/css/bootstrap.css" rel="stylesheet"> -->
 			<link href="'.$base_url.'assets/css/bootstrap.min.css" rel="stylesheet">
 			<link href="'.$base_url.'assets/css/bootstrap-theme.min.css" rel="stylesheet">
+
+			<!-- Bootstrap DataTable CSS -->
+			<link href="'.$base_url.'assets/dataTable/css/jquery.dataTables.min.css" rel="stylesheet">
+			<!-- ./ End css -->
 
 			<!-- Jquery UI -->
 			<link href="'.$base_url.'assets/css/jquery-ui.min.css" rel="stylesheet">
@@ -43,12 +47,15 @@ class Template
 					src: url("'.$base_url.'assets/fonts/TH Charmonman.ttf");
 				}
 
-			#brandner {
+			#brandner{
 				font-family: TH_Charmonman;
 				font-size: 30px;
 				padding-left:30px;
 				font-weight: bold;
 				color:white;
+			}
+			title{
+				font-family: TH_Charmonman;
 			}
 			body {
 				background:#F7F7F7;
@@ -95,6 +102,10 @@ class Template
 		<!-- Juqery UI -->
 		<!-- <script src="'.$base_url.'assets/js/jquery-ui.min.js"></script> -->
 
+		<!-- Bootstrap DataTable JS -->
+		<script src="'.$base_url.'assets/dataTable/js/jquery.dataTables.min.js"></script>
+		<!-- ./ End Js dataTable -->
+
 	</body>
 	</html>
 	';
@@ -105,8 +116,9 @@ public function menu()
 	// HOME 	BOOKING	CHECKIN	CHECKOUT	CASH	REPORT	SETTING	LOGOUT
 	return '
 	<ul class="nav navbar-nav navbar-right">
-		<li ><a href="#" style="color:#000;font-weight:bold;"> HOME </a></li>
-		<li><a href="#"  style="color:#000;font-weight:bold;">เข้าพัก</a></li>
+		<!-- <li ><a href="#" style="color:#000;font-weight:bold;"> HOME </a></li> -->
+		<li><a href="CheckIn"  style="color:#000;font-weight:bold;">CHECK IN</a></li>
+		<li><a href="CheckOut"  style="color:#000;font-weight:bold;">CHECK OUT</a></li>
 		<li class="dropdown">
 			<a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"  style="color:#000;font-weight:bold;"> รายงาน <span class="caret"></span></a>
 			<ul class="dropdown-menu">

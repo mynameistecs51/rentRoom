@@ -10,7 +10,8 @@ class Report extends CI_Controller {
 	}
 	public function index()
 	{
-
+		$this->Main();
+		$this->load->view('report/index',$this->data);
 	}
 
 	public function Main()

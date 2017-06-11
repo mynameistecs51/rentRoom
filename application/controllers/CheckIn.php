@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class CheckInOut extends CI_Controller {
+class CheckIn extends CI_Controller {
 
 	public function __construct()
 	{
 		parent::__construct();
-		$this->ctl = 'CheckInOut';
+		$this->ctl = 'CheckIn';
 		$now = new DateTime(null, new DateTimeZone('Asia/Bangkok'));
 		$this->dt_now = $now->format('Y-m-d H:i:s');
 		$this->datenow = $now->format('d/m/').($now->format('Y')+543);
@@ -20,7 +20,7 @@ class CheckInOut extends CI_Controller {
 		$this->data['lastDay'] = date('t',strtotime(date('y'.'-'.$mounth.'-d')));
 		$this->data['mounth'] = $mounth;
 		$this->Main();
-		$this->load->view('checkInOut/index',$this->data);
+		$this->load->view('checkIn/index',$this->data);
 	}
 
 	public function Main()
@@ -38,7 +38,7 @@ class CheckInOut extends CI_Controller {
 	{
 
 		$this->Main();
-		$this->load->view('checkInOut/Checkin',$this->data);
+		$this->load->view('checkIn/Checkin',$this->data);
 	}
 
 	public function saveCheckIn()
@@ -50,16 +50,16 @@ class CheckInOut extends CI_Controller {
 	public function form_CheckOut()
 	{
 		$this->Main();
-		$this->load->view('checkInOut/CheckOut',$this->data);
+		$this->load->view('checkIn/CheckOut',$this->data);
 	}
 
 	public function form_Booking()
 	{
 		$this->Main();
-		$this->load->view('checkInOut/Booking',$this->data);
+		$this->load->view('checkIn/Booking',$this->data);
 	}
 
 }
 
-/* End of file CheckInout.php */
-/* Location: ./application/controllers/CheckInout.php */
+/* End of file CheckIn.php */
+/* Location: ./application/controllers/CheckIn.php */
