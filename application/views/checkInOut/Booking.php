@@ -82,13 +82,8 @@
 			<p class="required">*</p>
 			<input type="text" class="form-control"  name="lastname_th" placeholder="สกุล" required>
 		</div>
-		<!-- <div class="col-sm-3" >
-			<p >วันที่จอง </p>
-			<p class="required">*</p>
-			<input type="text" class="form-control"  name="lastname_th" placeholder="สกุล" required>
-		</div> -->
 		<div class="col-sm-3" >
-			<p >ทะเบียนรถยนต์ </p>
+			<p >วันที่จอง </p>
 			<p class="required">*</p>
 			<input type="text" class="form-control"  name="lastname_th" placeholder="สกุล" required>
 		</div>
