@@ -27,7 +27,7 @@
 					<option>VIP</option>
 				</select>
 			</div>
-			<button  class="btn btn-default"><i class="glyphicon glyphicon-search"></i> </button>
+			<button  class="btn btn-primary"><i class="glyphicon glyphicon-search"></i> ค้นหา</button>
 			<!-- </div> -->
 		</div>
 	</div>
