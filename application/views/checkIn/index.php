@@ -198,7 +198,7 @@
 		function checkIn() {
 			$('.btn_CheckIn').click(function(){
 				var roomNumber=[];  //รายการห้องที่เลือก room1,room2
-				if($('.check_room').is(':checked') == true && $('.check_room').is(':readonly') ){
+				if($('.check_room').is(':checked') == true  ){
 					$('.check_room:checked').each(function( index,r ) {
 						roomNumber.push('ห้อง '+$('#'+r.id+':checked').val());
 					});
@@ -257,7 +257,7 @@
 		}
 
 	/*
-	*-------------------------check button room  ----------------
+	*-------------------------checked button room  ----------------
 	*/
 	$(function () {
 		$('.button-checkbox').each(function () {

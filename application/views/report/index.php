@@ -1,21 +1,46 @@
 <?php echo $header; ?>
 <div class="col-sm-12 ">
 	<div class="col-sm-3">	</div>
-	<div class="col-sm-6 text-center">
+	<div class="col-sm-6">
 
 		<table width="100%" border='1'  id="example" class="table table-hover table-bordered">
 			<caption >
-				<div class="col-sm-12 text-center">
-					<b  style="font-family:'TH_Charmonman';font-weight: bold;font-size: 20px;">จันเจ้าโฮเทล (JanJao Hotel)</b>
-				</div>
-				<div class="text-center">โรงแรมจันทร์เจ้า 666 หมู่ 6
-					ถ.โพนพิสัย ต.หมากแข้ง <br>
-					อ.เมือง จ.อุดรธานี 41000 <br>
-					โทร 0910571616
-				</div>
+				<table width="100%" >
+					<tr>
+						<td class="col-sm-3"></td>
+						<td class="col-sm-3 text-center" align="center"> <b>ใบเสร็จรับเงิน </b></td>
+						<td class="col-sm-3"></td>
+					</tr>
+					<tr>
+						<td class="col-sm-3" colspan="2">
+							จันทร์เจ้า โฮเทล <br>
+							666 หมู่ 6	ถ.โพนพิสัย ต.หมากแข้ง 	อ.เมือง จ.อุดรธานี 41000 <br>
+							โทร 0910571616 <br>
+							หมายเลขผู้เสียภาษี  111111111111
+						</td>
+						<td class="col-sm-3 " style="widows: 100%;text-align: right;">
+							<label > ต้นฉบับ</label>
+							<br>
+							<label style="width: 40%;padding-left: 0px;text-align: left;">เลขที่ </label>
+							<label style="padding-right: 0%;text-align: right;"> 123456789</label>
+							<br>
+							<label style="width: 40%;padding-left: 0px;text-align: left;">วันที่ </label>
+							<label style="padding-right: 0%;text-align: right;"><?php echo date('d-m-y'); ?></label>
+							<br>
+							<label style="width: 40%;padding-left: 0px;text-align: left;">ออกโดย </label>
+							<label style="padding-right: 0%;text-align: right;">Administrator</label>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3">
+							<span><b>ชื่อลูกค้า</b>   ไชยวัฒน์ ไชยวัฒน์</span>
+							<br>
+							<span><b>ที่อยู่</b> 	ราชภัฏอุดรธานี</span>
+						</td>
+					</tr>
+				</table>
 			</caption>
-			<caption> วันที่ <?php echo date('j').' เดือน '.$getMonth[$mounth].' พ.ศ. '.$getYear[date('Y')];?> </caption>
-			<thead   style="text-align:center;background:#E6E6E6">
+			<thead   style="background:#E6E6E6">
 				<tr>
 					<th>ชื่อ - สกุล</th>
 					<th>ห้อง</th>
@@ -48,7 +73,7 @@
 	</div>
 </div>
 <div class="col-sm-12">
-<div class="col-sm-5"></div>
+	<div class="col-sm-5"></div>
 	<p class="text-center">
 		<button class="btn btn-primary btn_print"><span class="fa fa-print"> ปริ๊น</span></button>
 	</p>
