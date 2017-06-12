@@ -9,7 +9,7 @@
 					<h4><u> วันที่ <?php echo date('j').' เดือน '.$getMonth[$mounth].' พ.ศ. '.$getYear[date('Y')];?> </u></h4>
 				</div>
 			</div>
-			<!-- <div class="form-group "> -->
+			<!-- <div class="col-sm-7 "> -->
 			<div class="form-group">
 				<label for="exampleInputName2">Name</label>
 				<input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
