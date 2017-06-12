@@ -69,7 +69,7 @@
 							<i class="fa fa-bed fa-2x" aria-hidden="true"></i>
 							<h4>202</h4>
 						</button>
-						<input type="checkbox" class="hidden check_room" name="check_room[]" id="room202" value="room202" checked />
+						<input type="checkbox" class="hidden check_room" name="check_room[]" id="room202" value="room202" checked disabled readonly />
 					</span>
 				</div>
 				<div class="col-sm-1 " style="margin:10px;">
@@ -175,7 +175,7 @@
 			Booking();
 		});
 
-		function message_alert(message) {
+		function alert(message) {
 			var html ='	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">';
 			html +='	<div class="modal-dialog modal-sm" role="document">';
 			html +='<div class="modal-content">';
@@ -198,7 +198,7 @@
 		function checkIn() {
 			$('.btn_CheckIn').click(function(){
 				var roomNumber=[];  //รายการห้องที่เลือก room1,room2
-				if($('.check_room').is(':checked') == true){
+				if($('.check_room').is(':checked') == true && $('.check_room').is(':readonly') ){
 					$('.check_room:checked').each(function( index,r ) {
 						roomNumber.push('ห้อง '+$('#'+r.id+':checked').val());
 					});
