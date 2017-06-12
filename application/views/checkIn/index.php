@@ -2,35 +2,33 @@
 
 <!-- <div class="panel panel-primary"  style="padding:10px;">
 	<div class="panel-heading"><i class="glyphicon glyphicon-list"></i> บันทึกการเข้าพัก</div> -->
-	<div class="container ">
-		<div class="navbar navbar-default " style="padding-top: 5px;">
-			<div class="form-inline">
-				<div class="form-group col-sm-5 pull-left">
-					<div class="text-primary line-height">
-						<h4><u> วันที่ <?php echo date('j').' เดือน '.$getMonth[$mounth].' พ.ศ. '.$getYear[date('Y')];?> </u></h4>
-					</div>
+	<div class="navbar navbar-default " style="padding-top: 5px;">
+		<div class="form-inline">
+			<div class="form-group col-sm-5 pull-left">
+				<div class="text-primary line-height">
+					<h4><u> วันที่ <?php echo date('j').' เดือน '.$getMonth[$mounth].' พ.ศ. '.$getYear[date('Y')];?> </u></h4>
 				</div>
-				<!-- <div class="form-group "> -->
-				<div class="form-group">
-					<label for="exampleInputName2">Name</label>
-					<input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
-				</div>
-				<div class="form-group">
-					<label for="exampleInputEmail2">Email</label>
-					<input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
-				</div>
-				<div class="form-group">
-					<label for="typeRoom">ประเภทห้อง</label>
-					<select class="form-control" id="typeRoom">
-						<option>SINGEL ROOMS</option>
-						<option>TWIN ROOMS</option>
-						<option>STANDDARD</option>
-						<option>VIP</option>
-					</select>
-				</div>
-				<button  class="btn btn-default"><i class="glyphicon glyphicon-search"></i> </button>
-				<!-- </div> -->
 			</div>
+			<!-- <div class="form-group "> -->
+			<div class="form-group">
+				<label for="exampleInputName2">Name</label>
+				<input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputEmail2">Email</label>
+				<input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+			</div>
+			<div class="form-group">
+				<label for="typeRoom">ประเภทห้อง</label>
+				<select class="form-control" id="typeRoom">
+					<option>SINGEL ROOMS</option>
+					<option>TWIN ROOMS</option>
+					<option>STANDDARD</option>
+					<option>VIP</option>
+				</select>
+			</div>
+			<button  class="btn btn-default"><i class="glyphicon glyphicon-search"></i> </button>
+			<!-- </div> -->
 		</div>
 	</div>
 
