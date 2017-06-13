@@ -3,16 +3,16 @@
 	<div class="col-sm-3">	</div>
 	<div class="col-sm-6">
 
-		<table width="100%" border='1'  id="example" class="table table-hover table-bordered">
+		<table width="100%" border='1' border-color="#fff"  id="example" class="table table-hover table-bordered">
 			<caption >
-				<table width="100%" >
+				<table width="100%" border='1'>
 					<tr>
-						<td class="col-sm-3"></td>
-						<td class="col-sm-3 text-center" align="center"> <b>ใบเสร็จรับเงิน </b></td>
-						<td class="col-sm-3"></td>
+						<td class="col-sm-4" style="width: 30%;"></td>
+						<td class="col-sm-4" align="center"> <b>ใบเสร็จรับเงิน </b></td>
+						<td class="col-sm-4" style="width: 30%;"></td>
 					</tr>
 					<tr>
-						<td class="col-sm-3" colspan="2">
+						<td class="col-sm-3" colspan="2"  style="widows: 100%;text-align: left;">
 							จันทร์เจ้า โฮเทล <br>
 							666 หมู่ 6	ถ.โพนพิสัย ต.หมากแข้ง 	อ.เมือง จ.อุดรธานี 41000 <br>
 							โทร 0910571616 <br>
@@ -40,26 +40,28 @@
 					</tr>
 				</table>
 			</caption>
-			<thead   style="background:#E6E6E6">
-				<tr>
-					<th>ชื่อ - สกุล</th>
-					<th>ห้อง</th>
+			<thead>
+				<tr   style="background:#E6E6E6">
+					<th>ที่</th>
 					<th>รายการ</th>
-					<th>จัดการ</th>
-
+					<th>จำนวน</th>
+					<th>หน่วยละ</th>
+					<th>จำนวนเงิน</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td>นาย ไชยวัฒน์ หอมแสง</td>
+					<td>1</td>
 					<td>ห้อง 202</td>
 					<td>ห้องเตียงคู่</td>
 					<td>500 Bath.</td>
+					<td>500 Bath.</td>
 				</tr>
 				<tr>
-					<td>นาย ไชยวัฒน์ หอมแสง</td>
+					<td>2</td>
 					<td>ห้อง 203</td>
 					<td>ห้องเตียงเดี่ยว</td>
+					<td>500 Bath.</td>
 					<td>500 Bath.</td>
 				</tr>
 			</tbody>
